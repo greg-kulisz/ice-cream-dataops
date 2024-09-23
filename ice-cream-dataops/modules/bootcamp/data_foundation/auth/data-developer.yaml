@@ -1,0 +1,53 @@
+name: data_developer
+sourceId: {{ data_pipeline_oee_source_id }}
+capabilities:
+  - projectsAcl:
+      actions:
+        - LIST
+        - READ
+      scope:
+        all: {}
+  - assetsAcl:
+      actions:
+        - READ
+        - WRITE
+      scope:
+        all: {}
+  - filesAcl:
+      actions:
+        - READ
+        - WRITE
+      scope:
+        all: {}
+  - rawAcl:
+      actions:
+        - READ
+        - WRITE
+        - LIST
+      scope:
+        all: {}
+  - timeSeriesAcl:
+      actions:
+        - READ
+        - WRITE
+      scope:
+        all: {}
+  - dataModelsAcl:
+      actions:
+        - READ
+        - WRITE
+      scope:
+        all: {}
+  - dataModelInstancesAcl:
+      actions:
+        - READ
+        - WRITE
+      scope:
+        all: {}
+  - datasetsAcl:
+      actions:
+        - READ
+        - WRITE
+        - OWNER
+      scope:
+        all: {}

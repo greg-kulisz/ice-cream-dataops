@@ -3,8 +3,10 @@ environment:
   project: cdf-bootcamp-02-test
   type: test
   selected:
+  - modules/bootcamp/data_foundation
+  - modules/bootcamp/ice_cream_api
+  - modules/bootcamp/use_cases/oee
   
-
 variables:
   modules:
     bootcamp:
@@ -32,8 +34,8 @@ variables:
       data_pipeline_oee_client_secret: ${DATA_PIPELINE_OEE_CLIENT_SECRET} # replaced by .env
       icapi_extractors_client_id: ${ICAPI_EXTRACTORS_CLIENT_ID} # replaced by .env
       icapi_extractors_client_secret: ${ICAPI_EXTRACTORS_CLIENT_SECRET} # replaced by .env
-      ice_cream_api:
-        icapi_ds_external_id: ds_icapi
+   
+      icapi_ds_external_id: ds_icapi
 
       use_cases:
         oee:
