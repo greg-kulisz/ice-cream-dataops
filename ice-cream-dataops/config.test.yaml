@@ -1,14 +1,14 @@
 environment:
   name: test
-  project: <my-project-test>
+  project: cdf-bootcamp-02-test
   type: test
   selected:
-  - modules/
+  
 
 variables:
   modules:
     bootcamp:
-      CDF_PROJECT: <YOUR CDF PROJECT> # ex. cdf-bootcamp-01-test
+      CDF_PROJECT: cdf-bootcamp-02-test # ex. cdf-bootcamp-01-test
       IDP_CLIENT_ID: ${IDP_CLIENT_ID} # replaced by .env
       IDP_CLIENT_SECRET: ${IDP_CLIENT_SECRET} # replaced by .env
       IDP_TENANT_ID: ${IDP_TENANT_ID} # replaced by .env
@@ -18,15 +18,15 @@ variables:
       IDP_TOKEN_URL: ${IDP_TOKEN_URL} # replaced by .env
       # Groups
       # OBJECT ID FOR TEST/PROD DATA DEVELOPER ENTRA GROUP
-      data_developer_source_id: <NotSet>
+    
       # OBJECT ID FOR TEST/PROD DATA PIPELINE OEE ENTRA GROUP
-      data_pipeline_oee_source_id: <NotSet>
+      data_pipeline_oee_source_id: 9968abda-911b-4a03-9ebe-0e9c1ba2cd99
       # OBJECT ID FOR TEST/PROD ADMIN TK ENTRA GROUP
-      readwrite_source_id: <NotSet>
+      readwrite_source_id: ca14d9d3-4c1b-4c33-af37-48d893dda2a3
       # OBJECT ID FOR TEST/PROD ADMIN TK ENTRA GROUP
-      readonly_source_id: <NotSet>
+      readonly_source_id: ca14d9d3-4c1b-4c33-af37-48d893dda2a3
       # OBJECT ID FOR TEST/PROD ADMIN TK ENTRA GROUP
-      icapi_extractors_source_id: <NotSet>
+      icapi_extractors_source_id: 4e160232-c140-4be9-b2ad-93003bd7a63d
       # Client Ids
       data_pipeline_oee_client_id: ${DATA_PIPELINE_OEE_CLIENT_ID} # replaced by .env
       data_pipeline_oee_client_secret: ${DATA_PIPELINE_OEE_CLIENT_SECRET} # replaced by .env
