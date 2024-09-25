@@ -10,7 +10,7 @@
   data:
     backfill: True
     hours: 720
-  sites:
+    sites:
     - Oslo
   authentication:
     clientId: {{ icapi_extractors_client_id }}

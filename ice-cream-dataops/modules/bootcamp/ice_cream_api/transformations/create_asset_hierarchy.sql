@@ -1,6 +1,6 @@
 SELECT
   external_id AS externalId,
-  IF(s
+  IF(
     parent_external_id = ''
     OR parent_external_id IS NULL,
     '',
