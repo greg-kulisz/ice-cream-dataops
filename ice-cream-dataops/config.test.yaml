@@ -1,7 +1,10 @@
 environment:
-  name: test
-  project: cdf-bootcamp-02-test
-  type: test
+  #name: test
+  name: prod
+  #project: cdf-bootcamp-02-test
+  project: cdf-bootcamp-02-prod
+  #type: test
+  type: prod
   selected:
   - modules/bootcamp/data_foundation
   - modules/bootcamp/ice_cream_api
@@ -10,7 +13,9 @@ environment:
 variables:
   modules:
     bootcamp:
-      CDF_PROJECT: cdf-bootcamp-02-test # ex. cdf-bootcamp-01-test
+      #CDF_PROJECT: cdf-bootcamp-02-test # ex. cdf-bootcamp-01-test
+      CDF_PROJECT: cdf-bootcamp-02-prod
+
       IDP_CLIENT_ID: ${IDP_CLIENT_ID} # replaced by .env
       IDP_CLIENT_SECRET: ${IDP_CLIENT_SECRET} # replaced by .env
       IDP_TENANT_ID: ${IDP_TENANT_ID} # replaced by .env
@@ -19,16 +24,41 @@ variables:
       IDP_SCOPES: https://westeurope-1.cognitedata.com/.default
       IDP_TOKEN_URL: ${IDP_TOKEN_URL} # replaced by .env
       # Groups
-      # OBJECT ID FOR TEST/PROD DATA DEVELOPER ENTRA GROUP
-      data_developer_source_id: 15e155f7-e778-4982-8714-d65c083d1ea0
+
+      # OBJECT ID FOR TEST/PROD DATA DEVELOPER ENTRA GROUP - 
+      ##test
+      # data_developer_source_id: 15e155f7-e778-4982-8714-d65c083d1ea0
+      ## prod
+      data_developer_source_id: 773a7337-9be6-4338-ac62-b51b0affdbd1
+
       # OBJECT ID FOR TEST/PROD DATA PIPELINE OEE ENTRA GROUP
-      data_pipeline_oee_source_id: 629d3fe0-408c-4ad6-a09f-570d46a4680b
+      ##test
+      #data_pipeline_oee_source_id: 629d3fe0-408c-4ad6-a09f-570d46a4680b
+      ##prod
+      data_pipeline_oee_source_id: 29936438-051b-4aea-8727-275b9a5b09b8
+
+
       # OBJECT ID FOR TEST/PROD ADMIN TK ENTRA GROUP
-      readwrite_source_id: ca14d9d3-4c1b-4c33-af37-48d893dda2a3
+      ##test
+      #readwrite_source_id: ca14d9d3-4c1b-4c33-af37-48d893dda2a3
+      ##prod
+      readwrite_source_id: 43ecd0eb-65c6-4ff0-aece-a168107fa753
+
+
       # OBJECT ID FOR TEST/PROD ADMIN TK ENTRA GROUP
-      readonly_source_id: ca14d9d3-4c1b-4c33-af37-48d893dda2a3
-      # OBJECT ID FOR TEST/PROD ADMIN TK ENTRA GROUP
-      icapi_extractors_source_id: e6d6c8af-6e44-4ca9-8dee-3fcad39dec49
+      ##test
+      #readonly_source_id: ca14d9d3-4c1b-4c33-af37-48d893dda2a3
+      ##prod
+      readonly_source_id: 43ecd0eb-65c6-4ff0-aece-a168107fa753
+
+
+      # OBJECT ID FOR TEST/PROD ADMIN TK ENTRA GROUP (icapi extractors)
+      ##test
+      #icapi_extractors_source_id: e6d6c8af-6e44-4ca9-8dee-3fcad39dec49
+      ##prod
+      icapi_extractors_source_id: 834031d6-3536-4828-b77f-b37638ffea6f
+
+
       # Client Ids
       data_pipeline_oee_client_id: ${DATA_PIPELINE_OEE_CLIENT_ID} # replaced by .env
       data_pipeline_oee_client_secret: ${DATA_PIPELINE_OEE_CLIENT_SECRET} # replaced by .env
